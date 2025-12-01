@@ -6,8 +6,9 @@ col = input("Enter columns of Matrix ")
 Watchowski = Matrix(row,col)
 
 for each in Watchowski.Neo:
-    inrow = input(f"Enter row {Watchowski.Neo.index(each) + 1} of matrix ")
-    Watchowski.set_row(inrow)
+    for val in each:
+        inval = input(f"Enter row {Watchowski.Neo.index(each) + 1} column {each.index(val) + 1} of matrix ")
+        Watchowski.set_row(inval)
 
 check = []
 

@@ -5,8 +5,8 @@ class Matrix():
         col = abs(int(col))
         self.Neo = []
         for i in range(row):
-            listinator = [j for j in range(col)]
-            print(len(listinator))
+            listinator = [0 for j in range(col)]
+            print(listinator)
             self.Neo.append(listinator)
 
     def get_row(self,row):
@@ -18,8 +18,8 @@ class Matrix():
             raise ValueError("Input has non-integers")
         if len(Smith) == len(self.Neo[row - 1]):
             self.Neo[row - 1] = Smith
-        elif len(Smith) < len(self.Neo[row]):
-            while len(Smith) < len(self.Neo[row]):
+        elif len(Smith) < len(self.Neo[row - 1]):
+            while len(Smith) < len(self.Neo[row - 1]):
                 Smith.append(0)
             self.Neo[row - 1] = Smith
         else:
@@ -62,7 +62,7 @@ class Matrix():
 
     def print_matrix(self):
         for each in self.Neo:
-            print(each,"\n")
+            print(each)
 
 
     

@@ -38,14 +38,14 @@ class Matrix():
         if (row > len(self.Neo) or col > len(self.Neo)):
             raise ValueError(f"Index {row},{col} out of range.")
         else:
-            return self.Neo[row][col]
+            return self.Neo[row -1][col -1]
     def set_val(self,row,col,Trinity):
         if not isinstance(Trinity,int):
             raise ValueError(f"{Trinity} is not an integer")
         if (row > len(self.Neo) or col > len(self.Neo)):
             raise ValueError(f"Index {row},{col} out of range.")
         else:
-            self.Neo[row][col] = Trinity
+            self.Neo[row -1][col - 1] = Trinity
 
     def print_matrix(self):
         for each in self.Neo:

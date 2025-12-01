@@ -1,6 +1,6 @@
 
 class Matrix():
-    def init(self, row, col):
+    def __init__(self, row, col):
         row = abs(row)
         col = abs(col)
         self.Neo = []

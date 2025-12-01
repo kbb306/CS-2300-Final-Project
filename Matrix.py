@@ -4,8 +4,9 @@ class Matrix():
         row = abs(int(row))
         col = abs(int(col))
         self.Neo = []
-        for i in range(row - 1):
-            listinator = [j for j in range(col - 1)]
+        for i in range(row):
+            listinator = [j for j in range(col)]
+            print(len(listinator))
             self.Neo.append(listinator)
 
     def get_row(self,row):

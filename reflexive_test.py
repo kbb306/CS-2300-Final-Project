@@ -16,7 +16,8 @@ check = []
 Reflexive = True
 Watchowski.print_matrix()
 for each in Watchowski.Neo:
-    get = Watchowski.get_val(Watchowski.Neo.index(each),Watchowski.Neo.index(each))
+    print(f"Getting value at {Watchowski.Neo.index(each) + 1},{Watchowski.Neo.index(each)+ 1}")
+    get = Watchowski.get_val((Watchowski.Neo.index(each) + 1),(Watchowski.Neo.index(each)+ 1))
     if get < 1:
         Reflexive = False
         break

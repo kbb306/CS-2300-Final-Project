@@ -51,6 +51,7 @@ class Matrix():
     def set_val(self,row,col,Trinity):
         row = abs(int(row))
         col = abs(int(col))
+        Trinity = abs(int(Trinity))
         if not isinstance(Trinity,int):
             raise ValueError(f"{Trinity} is not an integer")
         if (row > len(self.Neo) or col > len(self.Neo)):

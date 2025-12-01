@@ -10,3 +10,14 @@ for each in Watchowski.Neo:
     Watchowski.set_row(inrow)
 
 check = []
+
+Reflexive = True
+for each in Watchowski.Neo:
+    get = Watchowski.get_val(Watchowski.Neo.index(each),Watchowski.Neo.index(each))
+    if get < 1:
+        Reflexive = False
+        break
+if Reflexive:
+    print("Your matrix is reflexive.")
+else:
+    print("Your matrix is not reflexive.")

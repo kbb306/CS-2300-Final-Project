@@ -11,10 +11,10 @@ for i in range(row):
         inrow.append(int(input(f"Enter next value in row {i+1}: ")))
     Watchowski.set_row((i+1),inrow)
 
-check = []
+print("Your matrix is: ")
+Watchowski.print_matrix()
 
 Reflexive = True
-Watchowski.print_matrix()
 for each in Watchowski.Neo:
     print(f"Getting value at {Watchowski.Neo.index(each) + 1},{Watchowski.Neo.index(each)+ 1}")
     get = Watchowski.get_val((Watchowski.Neo.index(each) + 1),(Watchowski.Neo.index(each)+ 1))

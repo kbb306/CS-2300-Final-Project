@@ -12,7 +12,7 @@ for i in range(rows):
     Reeves.set_row((i+1),inrow)
     try:
         Seveer.set_col(i+1,inrow)
-    except ValueError:
+    except ValueError("Input has too many elements"):
         print("Your matrix is not symmetrical")
         break
 if Reeves.Neo == Seveer.Neo:

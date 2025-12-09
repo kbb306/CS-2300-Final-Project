@@ -6,7 +6,7 @@ class Matrix():
         self.Neo = []
         for i in range(row):
             listinator = [0 for j in range(col)]
-            print(listinator)
+            #print(listinator)
             self.Neo.append(listinator)
 
     def get_row(self,row):

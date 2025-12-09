@@ -35,12 +35,12 @@ class Matrix():
         col = abs(int(col))
         if not all(isinstance(item, int) for item in Morpheus):
             raise ValueError("Input has non-integers")
-        if len(Morpheus) > self.Neo[0]:
+        if len(Morpheus) > len(self.Neo[col - 1]):
             raise ValueError("Input has too many elements")
         while len(Morpheus) < len(self.Neo[0]):
             Morpheus.append(0)
         for each in self.Neo:
-            each[col] = Morpheus[self.Neo.index(each)]
+            each[col-1] = Morpheus[self.Neo.index(each)]
 
     def get_val(self,row,col):
         row = abs(int(row))

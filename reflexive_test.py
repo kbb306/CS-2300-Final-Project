@@ -22,6 +22,6 @@ for each in Watchowski.Neo:
         Reflexive = False
         break
 if Reflexive:
-    print("Your matrix is reflexive.")
+    print("Your relation is reflexive.")
 else:
-    print("Your matrix is not reflexive.")
+    print("Your relation is not reflexive.")

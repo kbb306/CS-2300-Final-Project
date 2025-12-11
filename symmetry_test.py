@@ -8,7 +8,12 @@ Seveer = Matrix(cols,rows)
 for i in range(rows):
     inrow = []
     for j in range(cols):
-        inrow.append(int(input(f"Enter next value in row {i+1}: ")))
+        val = input(f"Enter next value in row {i+1}: ")
+        if val > 0:
+            val = 1
+        else:
+            val = 0
+        inrow.append(int())
     Reeves.set_row((i+1),inrow)
     try:
         Seveer.set_col(i+1,inrow)
@@ -21,6 +26,6 @@ else:
     Sym = False
 
 if Sym:
-    print("Your matrix is symmetrical!")
+    print("Your relation is symmetrical!")
 else:
-    print("Your matrix is not symmetrical!")
+    print("Your relation is not symmetrical!")

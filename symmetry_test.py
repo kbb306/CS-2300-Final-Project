@@ -29,4 +29,4 @@ if Sym:
     print("Your relation is symmetrical!")
 else:
     print("Your relation is not symmetrical!")
-anticheck(Reeves)
+#anticheck(Reeves)

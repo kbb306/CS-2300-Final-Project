@@ -1,3 +1,4 @@
+from Matrix import Matrix
 
 def anticheck(Matrix):
     anti = False
@@ -5,7 +6,7 @@ def anticheck(Matrix):
     col = len(Matrix.Neo[0])
     for i in range(1,row):
         for j in range(1,col):
-            if Reeves.get_val(i,j) == Reeves.get_val(j,i):
+            if Matrix.get_val(i,j) == Matrix.get_val(j,i):
                 anti = False
                 break
             else:
@@ -15,21 +16,21 @@ def anticheck(Matrix):
     else:
         print("Your relation is not antisymmetric!")    
 
-from Matrix import Matrix
+def main():
+    rows = int(input("Enter rows of Matrix: "))
+    cols = int(input("Enter columns of Matrix: "))
 
-rows = int(input("Enter rows of Matrix: "))
-cols = int(input("Enter columns of Matrix: "))
+    Reeves = Matrix(rows,cols)
 
-Reeves = Matrix(rows,cols)
-
-for i in range(rows):
-    inrow = []
-    for j in range(cols):
-        val = input(f"Enter next value in row {i+1}: ")
-        if int(val) > 0:
-            val = 1
-        else:
-            val = 0
-        inrow.append(int(val))
-    Reeves.set_row((i+1),inrow)
-anticheck(Reeves)
+    for i in range(rows):
+        inrow = []
+        for j in range(cols):
+            val = input(f"Enter next value in row {i+1}: ")
+            if int(val) > 0:
+                val = 1
+            else:
+                val = 0
+            inrow.append(int(val))
+        Reeves.set_row((i+1),inrow)
+    anticheck(Reeves)
+main()

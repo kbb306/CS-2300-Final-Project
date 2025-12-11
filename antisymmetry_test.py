@@ -26,6 +26,10 @@ def main():
         inrow = []
         for j in range(cols):
             val = input(f"Enter next value in row {i+1}: ")
+            if val > 0:
+                val = 1
+            else:
+                val = 0
             inrow.append(int(val))
         Reeves.set_row((i+1),inrow)
         Reeves.print_matrix()

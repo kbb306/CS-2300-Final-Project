@@ -1,5 +1,4 @@
 from Matrix import Matrix
-from antisymmetry_test import anticheck
 rows = int(input("Enter rows of matrix: "))
 cols = int(input("Enter columns of matrix: "))
 Sym = True
@@ -29,4 +28,3 @@ if Sym:
     print("Your relation is symmetrical!")
 else:
     print("Your relation is not symmetrical!")
-#anticheck(Reeves)

@@ -1,12 +1,12 @@
 from Matrix import Matrix
 
 def anticheck(Matrix):
-    anti = False
+    anti = True
     row = len(Matrix.Neo)
     col = len(Matrix.Neo[0])
     for i in range(1,row):
         for j in range(1,col):
-            if Matrix.get_val(i,j) == Matrix.get_val(j,i):
+            if Matrix.get_val(i,j) == Matrix.get_val(j,i) and i != j:
                 anti = False
                 break
             else:
@@ -26,11 +26,8 @@ def main():
         inrow = []
         for j in range(cols):
             val = input(f"Enter next value in row {i+1}: ")
-            if int(val) > 0:
-                val = 1
-            else:
-                val = 0
             inrow.append(int(val))
         Reeves.set_row((i+1),inrow)
+        Reeves.print_matrix()
     anticheck(Reeves)
 main()

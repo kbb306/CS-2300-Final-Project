@@ -32,6 +32,5 @@ def main():
                 val = 0
             inrow.append(int(val))
         Reeves.set_row((i+1),inrow)
-        Reeves.print_matrix()
     anticheck(Reeves)
 main()

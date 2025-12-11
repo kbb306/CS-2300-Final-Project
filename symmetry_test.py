@@ -24,8 +24,6 @@ if Reeves.Neo == Seveer.Neo:
     Sym = True
 else:
     Sym = False
-Reeves.print_matrix()
-Seveer.print_matrix()
 if Sym:
     print("Your relation is symmetrical!")
 else:

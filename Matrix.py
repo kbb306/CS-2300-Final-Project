@@ -12,6 +12,7 @@ class Matrix():
     def get_row(self,row):
         row = abs(int(row))
         return self.Neo[row - 1]
+    
     def set_row(self,row,Smith):
         row = abs(int(row))
         if not all(isinstance(item, int) for item in Smith):
@@ -36,12 +37,12 @@ class Matrix():
         col = abs(int(col))
         if not all(isinstance(item, int) for item in Morpheus):
             raise ValueError("Input has non-integers")
-        if len(Morpheus) > len(self.Neo[col - 1]):
+        if len(Morpheus) > len(self.Neo):
             raise ValueError("Input has too many elements")
         while len(Morpheus) < len(self.Neo[col - 1]):
             Morpheus.append(0)
-        for each in self.Neo:
-            each[col-1] = Morpheus[self.Neo.index(each)]
+        for i, each in enumerate(self.Neo):
+            each[col-1] = Morpheus[i]
 
     def get_val(self,row,col):
         row = abs(int(row))
@@ -50,6 +51,7 @@ class Matrix():
             raise ValueError(f"Index {row},{col} out of range.")
         else:
             return self.Neo[row -1][col -1]
+        
     def set_val(self,row,col,Trinity):
         row = abs(int(row))
         col = abs(int(col))

@@ -16,7 +16,7 @@ for i in range(rows):
         inrow.append(int(val))
     Reeves.set_row((i+1),inrow)
     try:
-        Seveer.set_col(i+1,inrow)
+        Seveer.set_col((i+1),inrow)
     except ValueError:
         Sym = False
         break
@@ -24,7 +24,8 @@ if Reeves.Neo == Seveer.Neo:
     Sym = True
 else:
     Sym = False
-
+Reeves.print_matrix()
+Seveer.print_matrix()
 if Sym:
     print("Your relation is symmetrical!")
 else:
